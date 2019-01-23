@@ -1,0 +1,321 @@
+dateModified: 1548284235
+email:
+  fromEmail: raederbenjamin1000@gmail.com
+  fromName: 'Benjamin''s Blog'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  7fe70937-76a0-4e4a-bda7-8c46ad626392:
+    name: Common
+  ea556090-531c-4b1e-9632-3a328a2772eb:
+    name: Blog
+fields:
+  4fde7648-12d7-49ae-ab25-87badd9e9d66:
+    contentColumnType: string
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: post
+    instructions: ''
+    name: Post
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_post}}'
+      localizeBlocks: false
+      maxBlocks: ''
+      minBlocks: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  94eb2fc5-18d8-42e5-a1db-752780d586bf:
+    contentColumnType: text
+    fieldGroup: 7fe70937-76a0-4e4a-bda7-8c46ad626392
+    handle: altText
+    instructions: ''
+    name: 'Alt Text'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f46435a0-e37f-494b-980b-9a2b6fcdebae:
+    contentColumnType: text
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: subHeadline
+    instructions: ''
+    name: 'Sub Headline'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+matrixBlockTypes:
+  50a95278-7cd0-4380-8a28-9e3288de2d32:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      758863b8-d10e-4f85-9260-fa4fc53821be:
+        tabs:
+          -
+            fields:
+              708e7683-8a07-4c44-a13d-4de81c6effe3:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      708e7683-8a07-4c44-a13d-4de81c6effe3:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: text
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes:
+            - 431e4963-6c02-4fe1-a90e-5888b696fa16
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Standard.json
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: textBlock
+    name: 'Text Block'
+    sortOrder: 1
+  51842c11-8e84-4c7e-8154-b7b29bc8d385:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      be09a772-092b-4d11-b0a2-bd2415179809:
+        tabs:
+          -
+            fields:
+              1610b01f-b978-43ec-9a1e-cafc3bc1c9a9:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      1610b01f-b978-43ec-9a1e-cafc3bc1c9a9:
+        contentColumnType: string
+        fieldGroup: null
+        handle: image
+        instructions: ''
+        name: Image
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          defaultUploadLocationSubpath: posts/
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Add image'
+          singleUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: imageBlock
+    name: 'Image Block'
+    sortOrder: 2
+  a5798142-5199-4b89-849d-4271c757d1e5:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      ff5249b2-7f23-445e-a42d-28b880e7e8a6:
+        tabs:
+          -
+            fields:
+              a6f60971-6633-49f0-9d89-b689528e5693:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      a6f60971-6633-49f0-9d89-b689528e5693:
+        contentColumnType: text
+        fieldGroup: null
+        handle: code
+        instructions: ''
+        name: Code
+        searchable: true
+        settings:
+          mode: gfm
+        translationKeyFormat: null
+        translationMethod: none
+        type: luwes\codemirror\fields\CodeMirrorField
+    handle: codeBlock
+    name: 'Code Block'
+    sortOrder: 3
+plugins:
+  code-mirror:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.7
+sections:
+  ba167593-0adb-412f-b3aa-6470572186b2:
+    enableVersioning: true
+    entryTypes:
+      80adb4c3-37f2-4940-b3d7-c121c8ae716a:
+        fieldLayouts:
+          46f130b8-a2d3-4be3-b8f2-da80cdc6f975:
+            tabs:
+              -
+                fields:
+                  4fde7648-12d7-49ae-ab25-87badd9e9d66:
+                    required: true
+                    sortOrder: 2
+                  f46435a0-e37f-494b-980b-9a2b6fcdebae:
+                    required: false
+                    sortOrder: 1
+                name: Blog
+                sortOrder: 1
+        handle: blog
+        hasTitleField: true
+        name: Blog
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Headline
+    handle: blog
+    name: Blog
+    propagateEntries: true
+    siteSettings:
+      e9196875-0f12-4280-a9ae-45d6b270450a:
+        enabledByDefault: true
+        hasUrls: true
+        template: post/_entry.html
+        uriFormat: 'post/{slug}'
+    type: channel
+siteGroups:
+  f95fca09-889c-467f-9465-fdac4702e920:
+    name: 'Benjamin''s Blog'
+sites:
+  e9196875-0f12-4280-a9ae-45d6b270450a:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Benjamin''s Blog'
+    primary: true
+    siteGroup: f95fca09-889c-467f-9465-fdac4702e920
+    sortOrder: 1
+superTableBlockTypes:
+  2d9e6361-35e9-42cf-a047-3bafee484c14:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      a26cc2f0-35fb-46fd-9e6b-e4a1f3ba179f:
+        tabs:
+          -
+            fields:
+              7cf9716a-ea49-4320-9a80-033e1af7e1f7:
+                required: false
+                sortOrder: 1
+              ebbe9d22-c6c3-4726-a19a-11c06b046f89:
+                required: false
+                sortOrder: 2
+            name: Content
+            sortOrder: 1
+    fields:
+      7cf9716a-ea49-4320-9a80-033e1af7e1f7:
+        contentColumnType: text
+        fieldGroup: null
+        handle: textBlock
+        instructions: ''
+        name: 'Text Block'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Standard.json
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      ebbe9d22-c6c3-4726-a19a-11c06b046f89:
+        contentColumnType: string
+        fieldGroup: null
+        handle: imageBlock
+        instructions: ''
+        name: 'Image Block'
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          defaultUploadLocationSubpath: '{slug}'
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: 'Add image'
+          singleUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+          targetSiteId: null
+          useSingleFolder: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+system:
+  edition: solo
+  live: true
+  name: 'Benjamin''s Blog'
+  schemaVersion: 3.1.22
+  timeZone: Europe/Berlin
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  431e4963-6c02-4fe1-a90e-5888b696fa16:
+    fieldLayouts:
+      89f804d3-ccb9-48ae-b76c-d7797f556c0c:
+        tabs:
+          -
+            fields:
+              94eb2fc5-18d8-42e5-a1db-752780d586bf:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    handle: uploads
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads/'
+    sortOrder: null
+    type: craft\volumes\Local
+    url: '@web/uploads/'
