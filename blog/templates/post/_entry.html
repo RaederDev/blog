@@ -7,16 +7,5 @@
 {% extends '_template/_main.html' %}
 
 {% block body %}
-    {{ post.title }}
-
-    {% for block in post.post.all() %}
-        {% switch block.type.handle %}
-        {% case "textBlock" %}
-            {{ block.text }}
-        {% case "imageBlock" %}
-            <img src="{{ block.image[0].Url }}" alt="{{ block.image[0].altText }}">
-        {% case "codeBlock" %}
-            <pre class="line-numbers"><code class="language-php">{{ block.code }}</code></pre>
-        {% endswitch %}
-    {% endfor %}
+    {% include 'post/_template.html' with {post: post, preview: false} %}
 {% endblock %}

@@ -1,0 +1,10 @@
+section.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  .btn {
+    margin-left: 15px;
+  }
+}

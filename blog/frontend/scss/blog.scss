@@ -1,0 +1,28 @@
+@import "../node_modules/reset-css/sass/reset";
+@import "vendor/prism";
+@import "../node_modules/materialize-css/sass/components/color-variables";
+@import "../node_modules/materialize-css/sass/components/color-classes";
+@import "variables";
+@import "fonts";
+
+$primary-color: $blue;
+$secondary-color: $blue;
+$link-color: lighten($blue, 10%);
+$card-link-color: $blue;
+
+@import "../node_modules/materialize-css/sass/materialize";
+
+@import "header";
+@import "main";
+@import "post";
+@import "pagination";
+
+body {
+  background-color: $light-grey;
+  @include font-roboto;
+}
+
+.read-more {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}

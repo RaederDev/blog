@@ -1,0 +1,51 @@
+<section class="post">
+    <div class="card">
+        {% if post.headerImage %}
+            <div class="card-image">
+                <img src="{{ post.headerImage[0].Url }}" alt="Post header" aria-hidden="true">
+            </div>
+        {% endif %}
+        <div class="card-title">
+            {% if preview %}
+                <a href="{{ post.Url }}">{{ post.title }}</a>
+            {% else %}
+                {{ post.title }}
+            {% endif %}
+        </div>
+        <div class="card-inner">
+            {% for block in post.post.all() %}
+                {% if not preview or loop.index0 < 1 %}
+                    {% switch block.type.handle %}
+                    {% case "textBlock" %}
+                        <section class="text-block">
+                            {{ block.text }}
+                        </section>
+                    {% case "imageBlock" %}
+                        <section class="image-block">
+                            <img src="{{ block.image[0].Url }}" alt="{{ block.image[0].altText }}">
+                        </section>
+                    {% case "codeBlock" %}
+                        <section class="code-block">
+                            <pre class="line-numbers"><code class="language-{{ block.language }}">{{ block.code }}</code></pre>
+                        </section>
+                    {% endswitch %}
+                {% endif %}
+            {% endfor %}
+            {% if preview %}
+                <div class="read-more">
+                    <a href="{{ post.Url }}" class="waves-effect waves-light btn">Read more</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="card-footer">
+            <span class="published">
+                <i class="tiny material-icons">schedule</i>
+                <time class="move-down" datetime="2016-09-11T17:50:03+02:00" itemprop="datePublished">{{ post.postDate | date('d.m.Y') }}</time>
+            </span>
+            <span class="createdby" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <i class="tiny material-icons">perm_identity</i>
+                <span class="move-down">Written by <span itemprop="name">{{ post.author.firstName }} {{ post.author.lastName }}</span></span>
+            </span>
+        </div>
+    </div>
+</section>

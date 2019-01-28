@@ -1,14 +1,59 @@
-dateModified: 1548284235
+dateModified: 1548714626
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  7d123277-caf5-4261-853c-f14771d23ed7:
+    name: Sitebar
   7fe70937-76a0-4e4a-bda7-8c46ad626392:
     name: Common
   ea556090-531c-4b1e-9632-3a328a2772eb:
     name: Blog
 fields:
+  223485dd-2949-488e-bb09-ae0e8fb9cef3:
+    contentColumnType: text
+    fieldGroup: 7fe70937-76a0-4e4a-bda7-8c46ad626392
+    handle: email
+    instructions: ''
+    name: Email
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
+    contentColumnType: string
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: headerImage
+    instructions: ''
+    name: 'Header Image'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: 'Add header image'
+      singleUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   4fde7648-12d7-49ae-ab25-87badd9e9d66:
     contentColumnType: string
     fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
@@ -41,6 +86,51 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  a72d0fd0-f600-4787-8e6b-9c7398e71a48:
+    contentColumnType: string
+    fieldGroup: 7d123277-caf5-4261-853c-f14771d23ed7
+    handle: sitebarImage
+    instructions: ''
+    name: 'Sitebar Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b879fc7c-2a6d-4eee-94b5-cc99ace68902:
+    contentColumnType: text
+    fieldGroup: 7d123277-caf5-4261-853c-f14771d23ed7
+    handle: sitebarText
+    instructions: ''
+    name: 'Sitebar Text'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   f46435a0-e37f-494b-980b-9a2b6fcdebae:
     contentColumnType: text
     fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
@@ -58,6 +148,46 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  fa6c672e-c040-412c-b580-9c150cc9c8c4:
+    contentColumnType: text
+    fieldGroup: 7d123277-caf5-4261-853c-f14771d23ed7
+    handle: sitebarHeadline
+    instructions: ''
+    name: 'Sitebar Headline'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+globalSets:
+  67a963b8-9a3f-4bf2-8691-40cff188fdca:
+    fieldLayouts:
+      e6aae659-a77c-4b16-921d-632ed88f2c16:
+        tabs:
+          -
+            fields:
+              223485dd-2949-488e-bb09-ae0e8fb9cef3:
+                required: true
+                sortOrder: 4
+              a72d0fd0-f600-4787-8e6b-9c7398e71a48:
+                required: true
+                sortOrder: 1
+              b879fc7c-2a6d-4eee-94b5-cc99ace68902:
+                required: true
+                sortOrder: 3
+              fa6c672e-c040-412c-b580-9c150cc9c8c4:
+                required: true
+                sortOrder: 2
+            name: Sitebar
+            sortOrder: 1
+    handle: sitebar
+    name: Sitebar
 matrixBlockTypes:
   50a95278-7cd0-4380-8a28-9e3288de2d32:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
@@ -145,8 +275,11 @@ matrixBlockTypes:
           -
             fields:
               a6f60971-6633-49f0-9d89-b689528e5693:
-                required: false
+                required: true
                 sortOrder: 1
+              cf4f47ac-3aa4-4db2-893d-5d329192429d:
+                required: true
+                sortOrder: 2
             name: Content
             sortOrder: 1
     fields:
@@ -162,6 +295,102 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: luwes\codemirror\fields\CodeMirrorField
+      cf4f47ac-3aa4-4db2-893d-5d329192429d:
+        contentColumnType: string
+        fieldGroup: null
+        handle: language
+        instructions: ''
+        name: Language
+        searchable: true
+        settings:
+          options:
+            -
+              default: ''
+              label: Markup
+              value: markup
+            -
+              default: ''
+              label: XML
+              value: xml
+            -
+              default: ''
+              label: HTML
+              value: html
+            -
+              default: ''
+              label: MathML
+              value: mathml
+            -
+              default: ''
+              label: SVG
+              value: svg
+            -
+              default: ''
+              label: CSS
+              value: css
+            -
+              default: ''
+              label: CLike
+              value: clike
+            -
+              default: '1'
+              label: Javascript
+              value: javascript
+            -
+              default: ''
+              label: Bash
+              value: bash
+            -
+              default: ''
+              label: Shell
+              value: shell
+            -
+              default: ''
+              label: Dart
+              value: dart
+            -
+              default: ''
+              label: Go
+              value: go
+            -
+              default: ''
+              label: Haskell
+              value: haskell
+            -
+              default: ''
+              label: Java
+              value: java
+            -
+              default: ''
+              label: PHP
+              value: php
+            -
+              default: ''
+              label: SQL
+              value: sql
+            -
+              default: ''
+              label: SCSS
+              value: scss
+            -
+              default: ''
+              label: Typescript
+              value: typescript
+            -
+              default: ''
+              label: Pug
+              value: pug
+            -
+              default: ''
+              label: Yaml
+              value: yaml
+            -
+              default: ''
+              label: Twig
+              value: twig
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
     handle: codeBlock
     name: 'Code Block'
     sortOrder: 3
@@ -188,12 +417,15 @@ sections:
             tabs:
               -
                 fields:
-                  4fde7648-12d7-49ae-ab25-87badd9e9d66:
-                    required: true
-                    sortOrder: 2
-                  f46435a0-e37f-494b-980b-9a2b6fcdebae:
+                  42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
                     required: false
                     sortOrder: 1
+                  4fde7648-12d7-49ae-ab25-87badd9e9d66:
+                    required: true
+                    sortOrder: 3
+                  f46435a0-e37f-494b-980b-9a2b6fcdebae:
+                    required: false
+                    sortOrder: 2
                 name: Blog
                 sortOrder: 1
         handle: blog
@@ -291,7 +523,7 @@ system:
   edition: solo
   live: true
   name: 'Benjamin''s Blog'
-  schemaVersion: 3.1.22
+  schemaVersion: 3.1.23
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
