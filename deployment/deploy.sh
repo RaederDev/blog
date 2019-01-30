@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 ssh benni@raeder.technology << EOL
-cd /home/benni/craft-blog && \
+cd /var/www/blog/ && \
 git pull && \
 cd blog/frontend && \
 npm ci && \
-gulp
+gulp && \
+cd .. && \
+php composer.phar install
 EOL
 rm /tmp/deploy_rsa
