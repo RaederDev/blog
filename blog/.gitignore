@@ -4,3 +4,5 @@
 .DS_Store
 web/uploads
 node_modules/
+web/assets/css
+web/assets/js

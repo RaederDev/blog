@@ -5,11 +5,11 @@
                 <img src="{{ post.headerImage[0].Url }}" alt="Post header" aria-hidden="true">
             </div>
         {% endif %}
-        <div class="card-title">
+        <div class="card-title {% if not post.headerImage %}no-image{% endif %}">
             {% if preview %}
-                <a href="{{ post.Url }}">{{ post.title }}</a>
+                <a href="{{ post.Url }}"><h1>{{ post.title }}</h1></a>
             {% else %}
-                {{ post.title }}
+                <h1>{{ post.title }}</h1>
             {% endif %}
         </div>
         <div class="card-inner">
@@ -27,6 +27,22 @@
                     {% case "codeBlock" %}
                         <section class="code-block">
                             <pre class="line-numbers"><code class="language-{{ block.language }}">{{ block.code }}</code></pre>
+                        </section>
+                    {% case "tableBlock" %}
+                        <section class="table-block">
+                            <table>
+                                {% for row in block.table.rows %}
+                                    <tr>
+                                        {% for column in row %}
+                                            <td>{{ column }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </section>
+                    {% case "headlineBlock" %}
+                        <section class="headline-block">
+                            <{{ block.size }}>{{ block.text }}</{{ block.size }}>
                         </section>
                     {% endswitch %}
                 {% endif %}

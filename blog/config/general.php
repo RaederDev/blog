@@ -43,6 +43,6 @@ return [
     // Production environment settings
     'production' => [
         // Prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
     ],
 ];

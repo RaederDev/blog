@@ -1,0 +1,11 @@
+{% set page = craft
+    .entries()
+    .section('pages')
+    .slug(craft.app.request.getSegment(2))
+    .one() %}
+
+{% extends '_template/_main.html' %}
+
+{% block body %}
+    {% include 'post/_template.html' with {post: page, preview: false} %}
+{% endblock %}

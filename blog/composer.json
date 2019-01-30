@@ -1,9 +1,9 @@
 {
   "require": {
-    "craftcms/cms": "3.1.5",
+    "craftcms/cms": "3.1.6.1",
     "craftcms/redactor": "2.3.0",
     "luwes/craft3-codemirror": "1.0.1",
-    "verbb/super-table": "2.1.5.3",
+    "supercool/tablemaker": "2.0.1",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

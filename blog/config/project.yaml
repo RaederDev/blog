@@ -1,4 +1,26 @@
-dateModified: 1548717647
+categoryGroups:
+  c7c6967f-49da-4e0f-9cc3-21d9132db17f:
+    fieldLayouts:
+      502f2d77-5169-4f87-b21e-49daa47a321d:
+        tabs:
+          -
+            fields:
+              09308107-e1f6-4d1c-bc98-f5b0102c441e:
+                required: true
+                sortOrder: 1
+            name: Menu
+            sortOrder: 1
+    handle: mainMenu
+    name: 'Main Menu'
+    siteSettings:
+      e9196875-0f12-4280-a9ae-45d6b270450a:
+        hasUrls: false
+        template: null
+        uriFormat: null
+    structure:
+      maxLevels: '1'
+      uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
+dateModified: 1548796384
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -10,7 +32,27 @@ fieldGroups:
     name: Common
   ea556090-531c-4b1e-9632-3a328a2772eb:
     name: Blog
+  ec0a0f03-4430-4cc7-8fd8-6d4305e85906:
+    name: Menu
 fields:
+  09308107-e1f6-4d1c-bc98-f5b0102c441e:
+    contentColumnType: string
+    fieldGroup: ec0a0f03-4430-4cc7-8fd8-6d4305e85906
+    handle: menuItemLink
+    instructions: ''
+    name: 'Menu Item Link'
+    searchable: true
+    settings:
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
   223485dd-2949-488e-bb09-ae0e8fb9cef3:
     contentColumnType: text
     fieldGroup: 7fe70937-76a0-4e4a-bda7-8c46ad626392
@@ -223,7 +265,7 @@ matrixBlockTypes:
         type: craft\redactor\Field
     handle: textBlock
     name: 'Text Block'
-    sortOrder: 1
+    sortOrder: 2
   51842c11-8e84-4c7e-8154-b7b29bc8d385:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
     fieldLayouts:
@@ -266,7 +308,7 @@ matrixBlockTypes:
         type: craft\fields\Assets
     handle: imageBlock
     name: 'Image Block'
-    sortOrder: 2
+    sortOrder: 3
   a5798142-5199-4b89-849d-4271c757d1e5:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
     fieldLayouts:
@@ -393,7 +435,104 @@ matrixBlockTypes:
         type: craft\fields\Dropdown
     handle: codeBlock
     name: 'Code Block'
-    sortOrder: 3
+    sortOrder: 4
+  b29b73fd-a54c-492c-968a-b7742cfa2625:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      01bd3080-8585-4daa-972f-6bef8a5e08b5:
+        tabs:
+          -
+            fields:
+              73556eae-2a1e-47f0-9bf5-3125750471f7:
+                required: true
+                sortOrder: 2
+              cc056be9-8563-4c95-890e-8cb682a29d40:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      73556eae-2a1e-47f0-9bf5-3125750471f7:
+        contentColumnType: text
+        fieldGroup: null
+        handle: text
+        instructions: ''
+        name: Text
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      cc056be9-8563-4c95-890e-8cb682a29d40:
+        contentColumnType: string
+        fieldGroup: null
+        handle: size
+        instructions: ''
+        name: Size
+        searchable: true
+        settings:
+          options:
+            -
+              default: ''
+              label: H2
+              value: h2
+            -
+              default: ''
+              label: H3
+              value: h3
+            -
+              default: ''
+              label: H4
+              value: h4
+            -
+              default: ''
+              label: H5
+              value: h5
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Dropdown
+    handle: headlineBlock
+    name: 'Headline Block'
+    sortOrder: 1
+  b68ad8f7-ac16-4088-852a-dc822e870df6:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      e52fbcb2-c60d-4255-aced-098c76a9536c:
+        tabs:
+          -
+            fields:
+              0edb2c5a-a1c1-489b-9578-59283b59c0ac:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      0edb2c5a-a1c1-489b-9578-59283b59c0ac:
+        contentColumnType: text
+        fieldGroup: null
+        handle: table
+        instructions: ''
+        name: Table
+        searchable: true
+        settings:
+          columnsAddRowLabel: ''
+          columnsInstructions: ''
+          columnsLabel: Columns
+          rowsAddRowLabel: ''
+          rowsInstructions: ''
+          rowsLabel: Rows
+        translationKeyFormat: null
+        translationMethod: none
+        type: supercool\tablemaker\fields\TableMakerField
+    handle: tableBlock
+    name: 'Table Block'
+    sortOrder: 5
 plugins:
   code-mirror:
     edition: standard
@@ -403,11 +542,61 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
-  super-table:
+  tablemaker:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.7
+    schemaVersion: 1.0.0
 sections:
+  09ca7c5c-75b7-4901-ab00-398c3b2d992e:
+    enableVersioning: true
+    entryTypes:
+      06b25b37-faa2-4872-861c-a1c0c8e9a517:
+        handle: home
+        hasTitleField: false
+        name: Home
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: home
+    name: Home
+    propagateEntries: true
+    siteSettings:
+      e9196875-0f12-4280-a9ae-45d6b270450a:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: /
+    type: single
+  9f394952-74e0-49b2-aed5-c323d1f358d3:
+    enableVersioning: true
+    entryTypes:
+      dc9e71a9-ef1a-447f-a1d5-8a3a0b713665:
+        fieldLayouts:
+          a177b209-4500-4ade-971c-18c23e183c9b:
+            tabs:
+              -
+                fields:
+                  4fde7648-12d7-49ae-ab25-87badd9e9d66:
+                    required: true
+                    sortOrder: 1
+                name: Blog
+                sortOrder: 1
+        handle: pages
+        hasTitleField: true
+        name: Pages
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Page title'
+    handle: pages
+    name: Pages
+    propagateEntries: true
+    siteSettings:
+      e9196875-0f12-4280-a9ae-45d6b270450a:
+        enabledByDefault: true
+        hasUrls: true
+        template: page/_entry
+        uriFormat: 'page/{slug}'
+    type: channel
   ba167593-0adb-412f-b3aa-6470572186b2:
     enableVersioning: true
     entryTypes:
@@ -454,9 +643,9 @@ sites:
     hasUrls: true
     language: en-US
     name: 'Benjamin''s Blog'
-    primary: true
+    primary: '1'
     siteGroup: f95fca09-889c-467f-9465-fdac4702e920
-    sortOrder: 1
+    sortOrder: '1'
 superTableBlockTypes:
   2d9e6361-35e9-42cf-a047-3bafee484c14:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66

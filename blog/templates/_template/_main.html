@@ -7,22 +7,37 @@
     <title>{{ siteName }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" />
     <link rel="stylesheet" href="{{ alias('@web/assets/css/blog.css') ~ '?v=' ~ assetVersion }}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="My personal Blog. Topics include Programming, Linux, Networking, Languages, Books and Politics."/>
+    <meta name="keywords" content="benjamin,räder,raeder, benjamin räder,programming,programmieren,server,linux,administration,tutorial" />
+    <meta name="theme-color" content="#01579A">
 </head>
 <body class="ltr">
+    <script src="{{ alias('@web/assets/js/main.js') ~ '?v=' ~ assetVersion }}" defer></script>
     <header>
         <nav>
             <div class="nav-wrapper">
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <a href="{{ alias('@web') }}" class="brand-logo">
                     <img src="{{ alias('@web/assets/img/logo.png') }}" alt="Benjamin's Blog" aria-hidden="true">
                     <span>Benjamin's blog</span>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Home</a></li>
-                    <li><a href="badges.html">Imprint</a></li>
+                    {% set menuEntries = craft.categories.group('mainMenu').all() %}
+                    {% nav entry in menuEntries %}
+                        <li class="{% if craft.app.request.absoluteUrl == entry.menuItemLink[0].Url %}active{% endif %}">
+                            <a href="{{ entry.menuItemLink[0].Url }}">{{ entry.title }}</a>
+                        </li>
+                    {% endnav %}
                 </ul>
             </div>
         </nav>
+        <ul class="sidenav" id="mobile-menu">
+            {% nav entry in menuEntries %}
+                <li class="{% if craft.app.request.absoluteUrl == entry.menuItemLink[0].Url %}active{% endif %}">
+                    <a href="{{ entry.menuItemLink[0].Url }}">{{ entry.title }}</a>
+                </li>
+            {% endnav %}
+        </ul>
     </header>
     <main>
         <div class="row">
@@ -48,6 +63,5 @@
             </div>
         </div>
     </main>
-    <script src="{{ alias('@web/assets/js/main.js') ~ '?v=' ~ assetVersion }}"></script>
 </body>
 </html>

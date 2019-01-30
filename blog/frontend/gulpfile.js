@@ -42,6 +42,7 @@ gulp.task('browserify', () => {
             ]
         }))
         .pipe(gap.appendFile('js/vendor/prism.js'))
+        .pipe(gap.appendFile('node_modules/materialize-css/dist/js/materialize.min.js'))
         .pipe(gulp.dest('../web/assets/js/'))
 });
 
