@@ -8,6 +8,7 @@
     .entries
     .section('blog')
     .relatedTo(tag)
+    .draft(0)
     .limit(5) as pageInfo, pageEntries %}
 
 {% extends '_template/_main.html' %}

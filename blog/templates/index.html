@@ -1,6 +1,10 @@
 {% extends '_template/_main.html' %}
 
-{% paginate craft.entries.section('blog').limit(5) as pageInfo, pageEntries %}
+{% paginate craft
+    .entries
+    .section('blog')
+    .draft(0)
+    .limit(5) as pageInfo, pageEntries %}
 
 {% block body %}
     {% for post in pageEntries %}

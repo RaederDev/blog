@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1548882537
+dateModified: 1548889179
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -81,6 +81,18 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  28af8427-42d2-4d66-84f9-bc669a7bac71:
+    contentColumnType: boolean
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: draft
+    instructions: ''
+    name: Draft
+    searchable: false
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
     contentColumnType: string
     fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
@@ -636,11 +648,14 @@ sections:
             tabs:
               -
                 fields:
+                  28af8427-42d2-4d66-84f9-bc669a7bac71:
+                    required: true
+                    sortOrder: 5
                   42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
                     required: false
                     sortOrder: 1
                   4f68686f-82b0-4413-9793-360dec302230:
-                    required: true
+                    required: false
                     sortOrder: 4
                   4fde7648-12d7-49ae-ab25-87badd9e9d66:
                     required: true

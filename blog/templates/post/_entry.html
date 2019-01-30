@@ -7,5 +7,7 @@
 {% extends '_template/_main.html' %}
 
 {% block body %}
-    {% include 'post/_template.html' with {post: post, preview: false} %}
+    {% if not post.draft or currentUser %}
+        {% include 'post/_template.html' with {post: post, preview: false} %}
+    {% endif %}
 {% endblock %}

@@ -3,6 +3,7 @@
 {% paginate craft
     .entries
     .section('blog')
+    .draft(0)
     .search(searchQuery)
     .limit(5) as pageInfo, pageEntries %}
 
