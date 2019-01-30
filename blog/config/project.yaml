@@ -1,4 +1,15 @@
 categoryGroups:
+  b32341ce-2fc7-41d2-ba05-3bbbb7d3a119:
+    handle: tags
+    name: Tags
+    siteSettings:
+      e9196875-0f12-4280-a9ae-45d6b270450a:
+        hasUrls: true
+        template: tag/_entry
+        uriFormat: 'tag/{title}'
+    structure:
+      maxLevels: '1'
+      uid: 1bcf9b0e-b5aa-4fc5-9b37-2867e4ef168a
   c7c6967f-49da-4e0f-9cc3-21d9132db17f:
     fieldLayouts:
       502f2d77-5169-4f87-b21e-49daa47a321d:
@@ -20,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1548796384
+dateModified: 1548882537
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -96,6 +107,25 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  4f68686f-82b0-4413-9793-360dec302230:
+    contentColumnType: string
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: tags
+    instructions: ''
+    name: Tags
+    searchable: true
+    settings:
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: 'Add tag'
+      source: 'group:b32341ce-2fc7-41d2-ba05-3bbbb7d3a119'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   4fde7648-12d7-49ae-ab25-87badd9e9d66:
     contentColumnType: string
     fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
@@ -609,6 +639,9 @@ sections:
                   42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
                     required: false
                     sortOrder: 1
+                  4f68686f-82b0-4413-9793-360dec302230:
+                    required: true
+                    sortOrder: 4
                   4fde7648-12d7-49ae-ab25-87badd9e9d66:
                     required: true
                     sortOrder: 3

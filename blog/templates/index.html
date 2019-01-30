@@ -6,13 +6,5 @@
     {% for post in pageEntries %}
         {% include 'post/_template.html' with {post: post, preview: true} %}
     {% endfor %}
-
-    <section class="pagination">
-        {% if pageInfo.prevUrl %}
-            <a href="{{ pageInfo.prevUrl }}" class="waves-effect waves-light btn">Previous Page</a>
-        {% endif %}
-        {% if pageInfo.nextUrl %}
-            <a href="{{ pageInfo.nextUrl }}" class="waves-effect waves-light btn">Next Page</a>
-        {% endif %}
-    </section>
+    {% include '_template/_pagination' with {pageInfo: pageInfo} %}
 {% endblock %}

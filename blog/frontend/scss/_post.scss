@@ -5,7 +5,7 @@ section.post {
     }
   }
 
-  .text-block, .card-title, .table-block, .headline-block {
+  .text-block, .card-title, .table-block, .headline-block, .tags-block {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -29,6 +29,31 @@ section.post {
     p {
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+  }
+
+  .tags-block {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .badge {
+      padding: 6px 10px;
+      float: none;
+      background-color: $primary-color;
+      color: $white;
+      border-radius: 8px;
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    .badge-wrapper {
+      display: inline-block;
+      padding-top: 16px;
+
+      a:hover span, a:focus span {
+        text-decoration: underline;
+      }
     }
   }
 

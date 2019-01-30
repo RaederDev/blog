@@ -1,0 +1,20 @@
+{% set tag = craft
+    .categories
+    .group('tags')
+    .title(craft.app.request.getSegment(2))
+    .one() %}
+
+{% paginate craft
+    .entries
+    .section('blog')
+    .relatedTo(tag)
+    .limit(5) as pageInfo, pageEntries %}
+
+{% extends '_template/_main.html' %}
+
+{% block body %}
+    {% for post in pageEntries %}
+        {% include 'post/_template.html' with {post: post, preview: true} %}
+    {% endfor %}
+    {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+{% endblock %}

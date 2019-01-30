@@ -52,6 +52,18 @@
                     <a href="{{ post.Url }}" class="waves-effect waves-light btn">Read more</a>
                 </div>
             {% endif %}
+            {% if post.tags %}
+                <section class="tags-block">
+                    <hr>
+                    <div class="tags">
+                        {% for tag in post.tags.all() %}
+                            <span class="badge-wrapper">
+                                <a href="{{ tag.Url }}"><span class="badge">{{ tag.title }}</span></a>
+                            </span>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
         </div>
         <div class="card-footer">
             <span class="published">

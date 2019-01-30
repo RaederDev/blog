@@ -1,0 +1,35 @@
+{% set searchQuery = craft.app.request.getParam('query') %}
+
+{% paginate craft
+    .entries
+    .section('blog')
+    .search(searchQuery)
+    .limit(5) as pageInfo, pageEntries %}
+
+{% extends '_template/_main.html' %}
+
+{% block body %}
+    {% for post in pageEntries %}
+        {% include 'post/_template.html' with {post: post, preview: true} %}
+    {% else %}
+        <section class="post">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ alias('@web/assets/img/404.jpg') }}" alt="No result" aria-hidden="true">
+                </div>
+                <div class="card-title">
+                    <h1>No results found :(</h1>
+                </div>
+                <div class="card-inner">
+                    <section class="text-block">
+                        <p>
+                            The search-engine tried as hard as it possibly could but even with all that effort it came back empty handed.<br>
+                            But you could always give it another try and find something different that might interest you.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+{% endblock %}

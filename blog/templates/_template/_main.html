@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-{% set assetVersion = 1 %}
+{% set assetVersion = 2 %}
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
@@ -48,9 +48,24 @@
             </div>
             <div class="col s12 l3">
                 <div class="card">
+                    <section class="search">
+                        <form action="{{ alias('@web/search') }}" method="get">
+                            <label for="query">Search</label>
+                            <div class="search-wrapper">
+                                <input type="text" id="query" name="query">
+                                <button type="submit">
+                                    <span class="btn"><i class="material-icons">search</i></span>
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="card">
                     <section class="post">
                         <div class="card-image">
-                            <img src="{{ sitebar.sitebarImage[0].Url }}" alt="About" aria-hidden="true">
+                            {% if sitebar.sitebarImage %}
+                                <img src="{{ sitebar.sitebarImage[0].Url }}" alt="About" aria-hidden="true">
+                            {% endif %}
                             <span class="card-title">{{ sitebar.sitebarHeadline }}</span>
                         </div>
                         <section class="text-block">
