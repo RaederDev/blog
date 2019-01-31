@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "65cceaefd74a13f35ab7e01a2e3bd0b6",
+    "content-hash": "c02fc05add3263e272e9588a3f30d3bf",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -304,11 +304,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.6.1",
+            "version": "3.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/12bf72bc73e0905a5c8a2bf74096046eb07ee075",
-                "reference": "12bf72bc73e0905a5c8a2bf74096046eb07ee075",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d7d9166144138f7794510f816b776bb1ff6761b3",
+                "reference": "d7d9166144138f7794510f816b776bb1ff6761b3",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +384,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2019-01-29T22:06:25+00:00"
+            "time": "2019-01-31T20:49:25+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -470,11 +470,11 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/f96f9ce6c94b2c7a443939d244e99ad7317d7a23",
-                "reference": "f96f9ce6c94b2c7a443939d244e99ad7317d7a23",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/1f561397bab4700f36b1393e11aa17c72c3bca0b",
+                "reference": "1f561397bab4700f36b1393e11aa17c72c3bca0b",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +513,7 @@
                 "source": "https://github.com/craftcms/redactor",
                 "docs": "https://github.com/craftcms/redactor"
             },
-            "time": "2019-01-22T21:41:57+00:00"
+            "time": "2019-01-30T21:53:19+00:00"
         },
         {
             "name": "craftcms/server-check",

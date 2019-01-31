@@ -1,7 +1,7 @@
 {
   "require": {
-    "craftcms/cms": "3.1.6.1",
-    "craftcms/redactor": "2.3.0",
+    "craftcms/cms": "3.1.7",
+    "craftcms/redactor": "2.3.1",
     "luwes/craft3-codemirror": "1.0.1",
     "supercool/tablemaker": "2.0.1",
     "vlucas/phpdotenv": "^2.4.0"
