@@ -1,13 +1,15 @@
-{% set post = craft
-    .entries()
-    .section('blog')
-    .slug(craft.app.request.getSegment(2))
-    .one() %}
-
 {% extends '_template/_main.html' %}
 
 {% block body %}
-    {% if not post.draft or currentUser %}
-        {% include 'post/_template.html' with {post: post, preview: false} %}
-    {% endif %}
+    {% cache %}
+        {% set post = craft
+            .entries()
+            .section('blog')
+            .slug(craft.app.request.getSegment(2))
+            .one() %}
+
+        {% if not post.draft or currentUser %}
+            {% include 'post/_template.html' with {post: post, preview: false} %}
+        {% endif %}
+    {% endcache %}
 {% endblock %}

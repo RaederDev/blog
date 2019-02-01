@@ -1,14 +1,15 @@
 {% extends '_template/_main.html' %}
 
-{% paginate craft
-    .entries
-    .section('blog')
-    .draft(0)
-    .limit(5) as pageInfo, pageEntries %}
-
 {% block body %}
-    {% for post in pageEntries %}
-        {% include 'post/_template.html' with {post: post, preview: true} %}
-    {% endfor %}
-    {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+    {% cache %}
+        {% paginate craft
+            .entries
+            .section('blog')
+            .draft(0)
+            .limit(5) as pageInfo, pageEntries %}
+        {% for post in pageEntries %}
+            {% include 'post/_template.html' with {post: post, preview: true} %}
+        {% endfor %}
+        {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+    {% endcache %}
 {% endblock %}

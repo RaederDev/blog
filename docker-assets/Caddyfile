@@ -1,4 +1,5 @@
 *:2015 {
+    push
     tls self_signed
     root /srv/web
     gzip
