@@ -6,20 +6,20 @@
     <meta charset="utf-8" />
     <title>{{ siteName }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" />
-    <link rel="stylesheet" href="{{ alias('@web/assets/css/blog.css') ~ '?v=' ~ assetVersion }}">
+    <link rel="stylesheet" href="{{ (alias('@web/assets/css/blog.css') ~ '?v=' ~ assetVersion) | h2push }}">
     <meta name="description" content="My personal Blog. Topics include Programming, Linux, Networking, Languages, Books and Politics."/>
     <meta name="keywords" content="benjamin,räder,raeder, benjamin räder,programming,programmieren,server,linux,administration,tutorial" />
     <meta name="theme-color" content="#01579A">
     <link rel="shortcut icon" href="{{ alias('@web/favicon.ico') }}">
 </head>
 <body class="ltr">
-    <script src="{{ alias('@web/assets/js/main.js') ~ '?v=' ~ assetVersion }}" defer></script>
+    <script src="{{ (alias('@web/assets/js/main.js') ~ '?v=' ~ assetVersion) | h2push }}" defer></script>
     <header>
         <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <a href="{{ alias('@web') }}" class="brand-logo">
-                    <img src="{{ alias('@web/assets/img/logo.png') }}" alt="Benjamin's Blog" aria-hidden="true">
+                    <img src="{{ alias('@web/assets/img/logo.png') | h2push }}" alt="Benjamin's Blog" aria-hidden="true">
                     <span>Benjamin's blog</span>
                 </a>
                 <ul class="right hide-on-med-and-down">
@@ -64,7 +64,7 @@
                     <section class="post">
                         <div class="card-image">
                             {% if sitebar.sitebarImage %}
-                                <img src="{{ sitebar.sitebarImage[0].Url }}" alt="About" aria-hidden="true">
+                                <img src="{{ sitebar.sitebarImage[0].Url | h2push }}" alt="About" aria-hidden="true">
                             {% endif %}
                             <span class="card-title">{{ sitebar.sitebarHeadline }}</span>
                         </div>

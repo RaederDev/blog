@@ -2,7 +2,7 @@
     <div class="card">
         {% if post.headerImage %}
             <div class="card-image">
-                <img src="{{ post.headerImage[0].Url }}" alt="Post header" aria-hidden="true">
+                <img src="{{ post.headerImage[0].Url | h2push }}" alt="Post header" aria-hidden="true">
             </div>
         {% endif %}
         <div class="card-title {% if not post.headerImage %}no-image{% endif %}">

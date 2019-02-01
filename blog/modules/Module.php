@@ -1,25 +1,12 @@
 <?php
+
 namespace modules;
 
 use Craft;
+use craft\events\TemplateEvent;
+use craft\web\View;
+use yii\base\Event;
 
-/**
- * Custom module class.
- *
- * This class will be available throughout the system via:
- * `Craft::$app->getModule('my-module')`.
- *
- * You can change its module ID ("my-module") to something else from
- * config/app.php.
- *
- * If you want the module to get loaded on every request, uncomment this line
- * in config/app.php:
- *
- *     'bootstrap' => ['my-module']
- *
- * Learn more about Yii module development in Yii's documentation:
- * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
- */
 class Module extends \yii\base\Module
 {
     /**
@@ -39,6 +26,35 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        // Custom initialization code goes here...
+        if (!Craft::$app->getRequest()->getIsSiteRequest()) {
+            return;
+        }
+
+        Craft::$app->getView()->registerTwigExtension(new H2PushHelper());
+
+        Event::on(View::class, View::EVENT_AFTER_RENDER_PAGE_TEMPLATE, function (TemplateEvent $ev) {
+            $assets = [];
+
+            //iterate over assets to build Link substrings
+            foreach (H2PushHelper::$assetsToPush as $asset => $config) {
+                $type = $config['type'];
+                if ($config['crossorigin']) {
+                    $assets[] = "<$asset>; rel=preload; as=$type; crossorigin";
+                } else {
+                    $assets[] = "<$asset>; rel=preload; as=$type";
+                }
+            }
+
+            if (count($assets) < 1) {
+                return;
+            }
+
+            //now we add our header
+            Craft::$app
+                ->getResponse()
+                ->getHeaders()
+                ->add('Link', implode(',', $assets));
+        });
+
     }
 }

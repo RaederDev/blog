@@ -1,7 +1,19 @@
 *:2015 {
+    tls self_signed
     root /srv/web
     gzip
     on startup php-fpm7
+    fastcgi / 127.0.0.1:9000 php {
+        index index.php
+    }
+    rewrite {
+        to {path} {path}/ /index.php?p={path}&{query} /index.php?{query}
+    }
+}
+
+*:2016 {
+    root /srv/web
+    gzip
     fastcgi / 127.0.0.1:9000 php {
         index index.php
     }
