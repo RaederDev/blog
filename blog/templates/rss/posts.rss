@@ -9,21 +9,23 @@
         <pubDate>{{ now|rss }}</pubDate>
         <lastBuildDate>{{ now|rss }}</lastBuildDate>
 
-        {% set posts = craft
-            .entries()
-            .section('blog')
-            .all() %}
-        {% for entry in posts %}
-            <item>
-                <title>{{ entry.title }}</title>
-                <link>{{ entry.url }}</link>
-                <pubDate>{{ entry.postDate|rss }}</pubDate>
-                <author>{{ entry.author.firstName }} {{ entry.author.lastName }}</author>
-                <guid>{{ entry.url }}</guid>
-                <description><![CDATA[
-                    {{ entry.postIntro }}
-                ]]></description>
-            </item>
-        {% endfor %}
+        {% cache %}
+            {% set posts = craft
+                .entries()
+                .section('blog')
+                .all() %}
+            {% for entry in posts %}
+                <item>
+                    <title>{{ entry.title }}</title>
+                    <link>{{ entry.url }}</link>
+                    <pubDate>{{ entry.postDate|rss }}</pubDate>
+                    <author>{{ entry.author.firstName }} {{ entry.author.lastName }}</author>
+                    <guid>{{ entry.url }}</guid>
+                    <description><![CDATA[
+                        {% include 'post/_template.html' with {post: entry} %}
+                    ]]></description>
+                </item>
+            {% endfor %}
+        {% endcache %}
     </channel>
 </rss>
