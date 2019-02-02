@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1548972187
+dateModified: 1549070511
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -577,6 +577,14 @@ matrixBlockTypes:
     sortOrder: 5
 plugins:
   code-mirror:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  http-2-server-push-twig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  http-3-server-push-twig:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
