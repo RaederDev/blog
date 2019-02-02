@@ -1602,16 +1602,16 @@
         },
         {
             "name": "raeder/craft-http2-server-push-twig",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/N0ps32/http-2-server-push-twig.git",
-                "reference": "eead11fc1da617bb12886d923ccb9bbaef3fb1be"
+                "reference": "f455a17207f8da53d8f910031d35f010dbd8e75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/N0ps32/http-2-server-push-twig/zipball/eead11fc1da617bb12886d923ccb9bbaef3fb1be",
-                "reference": "eead11fc1da617bb12886d923ccb9bbaef3fb1be",
+                "url": "https://api.github.com/repos/N0ps32/http-2-server-push-twig/zipball/f455a17207f8da53d8f910031d35f010dbd8e75d",
+                "reference": "f455a17207f8da53d8f910031d35f010dbd8e75d",
                 "shasum": ""
             },
             "require": {
@@ -1650,7 +1650,7 @@
                 "http-2-server-push",
                 "twig"
             ],
-            "time": "2019-02-02T01:15:14+00:00"
+            "time": "2019-02-02T02:46:46+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
