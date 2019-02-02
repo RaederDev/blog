@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
-{% set assetVersion = 2 %}
+{% set assetVersion = 3 %}
+{% if pageTitle is not defined %}
+    {% set pageTitle = '' %}
+{% endif %}
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>{{ siteName }}</title>
+    <title>{% if pageTitle %}{{ pageTitle }} - {% endif %}{{ siteName }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" />
     <link rel="stylesheet" href="{{ (alias('@web/assets/css/blog.css') ~ '?v=' ~ assetVersion) | h2push }}">
-    <meta name="description" content="My personal Blog. Topics include Programming, Linux, Networking, Languages, Books and Politics."/>
-    <meta name="keywords" content="benjamin,räder,raeder, benjamin räder,programming,programmieren,server,linux,administration,tutorial" />
+    <meta name="description" content="{% if pageDescription is defined %}{{ pageDescription }}{% else %}{{ seo.seoPageDescription }}{% endif %}"/>
+    <meta name="keywords" content="{{ seo.seoKeywords }}" />
+    <meta property="og:image" content="{{ alias('@web/img/og.jpg') }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - {% endif %}{{ siteName }}"/>
+    <meta property="og:description" content="{% if pageDescription is defined %}{{ pageDescription }}{% else %}{{ seo.seoPageDescription }}{% endif %}"/>
     <meta name="theme-color" content="#01579A">
     <link rel="shortcut icon" href="{{ alias('@web/favicon.ico') }}">
 </head>
 <body class="ltr">
     <script src="{{ (alias('@web/assets/js/main.js') ~ '?v=' ~ assetVersion) | h2push }}" defer></script>
+    <a class="keyboard-navigation" href="#content">
+        Jump to content
+    </a>
+    <a class="keyboard-navigation" href="#site-bar">
+        Jump to site-bar
+    </a>
     <header>
         <nav>
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <a href="{{ alias('@web') }}" class="brand-logo">
                     <img src="{{ alias('@web/assets/img/logo.png') | h2push }}" alt="Benjamin's Blog" aria-hidden="true">
-                    <span>Benjamin's blog</span>
+                    <span>{{ siteName }}</span>
                 </a>
                 <ul class="right hide-on-med-and-down">
                     {% set menuEntries = craft.categories.group('mainMenu').all() %}
@@ -43,10 +59,12 @@
     <main>
         <div class="row">
             <div class="col s12 l9">
+                <div id="content"></div>
                 {% block body %}
                 {% endblock %}
             </div>
             <div class="col s12 l3">
+                <div id="site-bar"></div>
                 <div class="card">
                     <section class="search">
                         <form action="{{ alias('@web/search') }}" method="get">
@@ -58,6 +76,22 @@
                                 </button>
                             </div>
                         </form>
+                    </section>
+                </div>
+                <div class="card">
+                    <section class="social">
+                        <ul>
+                            <li>
+                                <a href="{{ alias('@web/rss/posts.rss') }}">
+                                    <img src="{{ (alias('@web/assets/img/icons/rss.png') ~ '?v=' ~ assetVersion) }}" alt="RSS" title="Subscribe via RSS">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/N0ps32/" target="_blank" rel="noopener">
+                                    <img src="{{ (alias('@web/assets/img/icons/github.png') ~ '?v=' ~ assetVersion) }}" alt="Github" title="Follow me on Github">
+                                </a>
+                            </li>
+                        </ul>
                     </section>
                 </div>
                 <div class="card">

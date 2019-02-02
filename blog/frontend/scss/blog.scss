@@ -17,6 +17,8 @@ $card-link-color: $blue;
 @import "post";
 @import "pagination";
 @import "search";
+@import "social";
+@import "accessiblity";
 
 body {
   background-color: $light-grey;
@@ -26,4 +28,12 @@ body {
 .read-more {
   padding-left: 24px;
   margin-bottom: 24px;
+}
+
+body.keyboard-focused {
+  a:focus, button:focus {
+    outline-width: 2px;
+    outline-style: dashed;
+    outline-color: darken($primary-color, 10%);
+  }
 }

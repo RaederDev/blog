@@ -1,0 +1,29 @@
+section.social {
+  padding: 15px;
+  padding-top: 17px;
+
+  ul {
+    display: flex;
+
+    li {
+      margin-left: 6px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a:hover img, a:active img {
+        opacity: .8;
+      }
+
+      img {
+        width: 50px;
+        display: block;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

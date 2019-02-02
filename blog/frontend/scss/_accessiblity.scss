@@ -1,0 +1,18 @@
+.keyboard-navigation {
+  height: 0;
+  width: 0;
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+  display: block;
+
+  &:focus {
+    position: static;
+    height: auto;
+    width: auto;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}

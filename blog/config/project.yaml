@@ -31,12 +31,14 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1549071940
+dateModified: 1549130765
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  64214baf-e128-4314-bb94-e706a622ad66:
+    name: SEO
   7d123277-caf5-4261-853c-f14771d23ed7:
     name: Sitebar
   7fe70937-76a0-4e4a-bda7-8c46ad626392:
@@ -93,6 +95,23 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  313757d2-4309-457f-8013-e2abec098ff4:
+    contentColumnType: text
+    fieldGroup: 64214baf-e128-4314-bb94-e706a622ad66
+    handle: seoPageDescription
+    instructions: ''
+    name: 'Seo Page Description'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
     contentColumnType: string
     fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
@@ -153,6 +172,24 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Matrix
+  5628138c-4cc5-4e63-a598-e61b3539d61a:
+    contentColumnType: text
+    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
+    handle: postIntro
+    instructions: ''
+    name: 'Post Intro'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   94eb2fc5-18d8-42e5-a1db-752780d586bf:
     contentColumnType: text
     fieldGroup: 7fe70937-76a0-4e4a-bda7-8c46ad626392
@@ -215,12 +252,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  f46435a0-e37f-494b-980b-9a2b6fcdebae:
+  cc0e52e4-1a1f-4b3f-bced-f51960c96346:
     contentColumnType: text
-    fieldGroup: ea556090-531c-4b1e-9632-3a328a2772eb
-    handle: subHeadline
+    fieldGroup: 64214baf-e128-4314-bb94-e706a622ad66
+    handle: seoKeywords
     instructions: ''
-    name: 'Sub Headline'
+    name: 'Seo Keywords'
     searchable: true
     settings:
       charLimit: ''
@@ -272,6 +309,22 @@ globalSets:
             sortOrder: 1
     handle: sitebar
     name: Sitebar
+  97e6fe20-f9a8-443d-a707-59024aac9367:
+    fieldLayouts:
+      e2977ae3-0365-4ee4-abb6-63d981ab3c9f:
+        tabs:
+          -
+            fields:
+              313757d2-4309-457f-8013-e2abec098ff4:
+                required: true
+                sortOrder: 2
+              cc0e52e4-1a1f-4b3f-bced-f51960c96346:
+                required: true
+                sortOrder: 1
+            name: SEO
+            sortOrder: 1
+    handle: seo
+    name: Seo
 matrixBlockTypes:
   50a95278-7cd0-4380-8a28-9e3288de2d32:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
@@ -583,7 +636,7 @@ plugins:
   http-2-server-push-twig:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 1.0.1
   redactor:
     edition: standard
     enabled: true
@@ -654,18 +707,21 @@ sections:
                 fields:
                   28af8427-42d2-4d66-84f9-bc669a7bac71:
                     required: true
-                    sortOrder: 5
+                    sortOrder: 6
+                  313757d2-4309-457f-8013-e2abec098ff4:
+                    required: false
+                    sortOrder: 3
                   42b4e6f8-86ab-4a55-b2c2-3ff5aa81b362:
                     required: false
                     sortOrder: 1
                   4f68686f-82b0-4413-9793-360dec302230:
                     required: false
-                    sortOrder: 4
+                    sortOrder: 5
                   4fde7648-12d7-49ae-ab25-87badd9e9d66:
                     required: true
-                    sortOrder: 3
-                  f46435a0-e37f-494b-980b-9a2b6fcdebae:
-                    required: false
+                    sortOrder: 4
+                  5628138c-4cc5-4e63-a598-e61b3539d61a:
+                    required: true
                     sortOrder: 2
                 name: Blog
                 sortOrder: 1

@@ -23,5 +23,16 @@ class Module extends \yii\base\Module
 
         parent::init();
 
+        if (!Craft::$app->getRequest()->getIsSiteRequest()) {
+            return;
+        }
+
+        $headers = Craft::$app->getResponse()->getHeaders();
+        $headers->add('X-Frame-Options', 'deny');
+        $headers->add('Content-Security-Policy', 'script-src \'self\'');
+        $headers->add('X-XSS-Protection', '1');
+        $headers->add('X-Content-Type-Options', 'nosniff');
+        $headers->add('Referrer-Policy', 'same-origin');
+        $headers->add('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
     }
 }

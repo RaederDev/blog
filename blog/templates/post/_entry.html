@@ -1,15 +1,18 @@
 {% extends '_template/_main.html' %}
 
-{% block body %}
-    {% cache %}
-        {% set post = craft
-            .entries()
-            .section('blog')
-            .slug(craft.app.request.getSegment(2))
-            .one() %}
+{% set post = craft
+    .entries()
+    .section('blog')
+    .slug(craft.app.request.getSegment(2))
+    .one() %}
 
-        {% if not post.draft or currentUser %}
-            {% include 'post/_template.html' with {post: post, preview: false} %}
-        {% endif %}
-    {% endcache %}
+{% if not post.draft or currentUser and post.seoPageDescription | length > 0 %}
+    {% set pageDescription = post.seoPageDescription %}
+    {% set pageTitle = post.title %}
+{% endif %}
+
+{% block body %}
+    {% if not post.draft or currentUser %}
+        {% include 'post/_template.html' with {post: post, preview: false} %}
+    {% endif %}
 {% endblock %}
