@@ -7,9 +7,11 @@
         .draft(0)
         .limit(5) as pageInfo, pageEntries %}
 
-    {% for post in pageEntries %}
-        {% include 'post/_template.html' with {post: post, preview: true} %}
-    {% endfor %}
+    <div class="page-home">
+        {% for post in pageEntries %}
+            {% include 'post/_template.html' with {post: post, preview: true} %}
+        {% endfor %}
 
-    {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+        {% include '_template/_pagination' with {pageInfo: pageInfo} %}
+    </div>
 {% endblock %}
