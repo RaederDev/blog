@@ -4,6 +4,7 @@
 {% if pageTitle is not defined %}
     {% set pageTitle = '' %}
 {% endif %}
+{% import 'post/_render-blocks' as render %}
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
@@ -102,9 +103,7 @@
                             {% endif %}
                             <span class="card-title">{{ sitebar.sitebarHeadline }}</span>
                         </div>
-                        <section class="text-block">
-                            {{ sitebar.sitebarText }}
-                        </section>
+                        {{ render.renderBlocks(sitebar, false) }}
                         <div class="card-action">
                             <a href="mailto:{{ sitebar.email }}">Contact Me</a>
                         </div>

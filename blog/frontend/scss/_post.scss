@@ -32,6 +32,10 @@ section.post {
     line-height: 1.3;
     font-size: 15px;
 
+    &.pull-bottom-block {
+      margin-bottom: -20px;
+    }
+
     p {
       padding-top: 10px;
       padding-bottom: 10px;

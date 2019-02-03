@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1549130765
+dateModified: 1549151872
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -296,12 +296,12 @@ globalSets:
               223485dd-2949-488e-bb09-ae0e8fb9cef3:
                 required: true
                 sortOrder: 4
+              4fde7648-12d7-49ae-ab25-87badd9e9d66:
+                required: true
+                sortOrder: 3
               a72d0fd0-f600-4787-8e6b-9c7398e71a48:
                 required: true
                 sortOrder: 1
-              b879fc7c-2a6d-4eee-94b5-cc99ace68902:
-                required: true
-                sortOrder: 3
               fa6c672e-c040-412c-b580-9c150cc9c8c4:
                 required: true
                 sortOrder: 2
@@ -404,6 +404,34 @@ matrixBlockTypes:
     handle: imageBlock
     name: 'Image Block'
     sortOrder: 3
+  8fd7fa2e-79b0-4e63-8823-028a34e514f2:
+    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
+    fieldLayouts:
+      1c05e2e6-ff40-42a8-939d-b3168b19b69e:
+        tabs:
+          -
+            fields:
+              9e4b20aa-be8b-4751-b3e1-ec7b3517bd62:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      9e4b20aa-be8b-4751-b3e1-ec7b3517bd62:
+        contentColumnType: text
+        fieldGroup: null
+        handle: twig
+        instructions: ''
+        name: Twig
+        searchable: true
+        settings:
+          mode: htmlmixed
+        translationKeyFormat: null
+        translationMethod: none
+        type: luwes\codemirror\fields\CodeMirrorField
+    handle: twigBlock
+    name: 'Twig Block'
+    sortOrder: 6
   a5798142-5199-4b89-849d-4271c757d1e5:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
     fieldLayouts:

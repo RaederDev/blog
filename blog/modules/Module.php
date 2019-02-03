@@ -27,6 +27,7 @@ class Module extends \yii\base\Module
             return;
         }
 
+        Sandbox::addTwigSandbox();
         $headers = Craft::$app->getResponse()->getHeaders();
         $headers->add('X-Frame-Options', 'deny');
         $headers->add('Content-Security-Policy', 'script-src \'self\'');
