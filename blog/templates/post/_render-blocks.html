@@ -30,7 +30,7 @@
                     </table>
                 </section>
             {% case "headlineBlock" %}
-                <section class="headline-block">
+                <section class="headline-block" {% if block.anchorName %}id="{{ block.anchorName }}"{% endif %}>
                 <{{ block.size }}>{{ block.text }}</{{ block.size }}>
                 </section>
             {% endswitch %}

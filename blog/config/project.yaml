@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1550969001
+dateModified: 1550970084
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -572,6 +572,9 @@ matrixBlockTypes:
               cc056be9-8563-4c95-890e-8cb682a29d40:
                 required: true
                 sortOrder: 1
+              fca27485-f693-446a-a099-0a61b4cb460a:
+                required: false
+                sortOrder: 3
             name: Content
             sortOrder: 1
     fields:
@@ -620,6 +623,23 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\Dropdown
+      fca27485-f693-446a-a099-0a61b4cb460a:
+        contentColumnType: text
+        fieldGroup: null
+        handle: anchorName
+        instructions: ''
+        name: 'Anchor Name'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
     handle: headlineBlock
     name: 'Headline Block'
     sortOrder: 1
