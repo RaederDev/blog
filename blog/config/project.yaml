@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1549151872
+dateModified: 1550969001
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -664,11 +664,11 @@ plugins:
   http-2-server-push-twig:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.1
+    schemaVersion: 1.1.0
   redactor:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.1
+    schemaVersion: 2.2.2
   tablemaker:
     edition: standard
     enabled: true
@@ -848,7 +848,7 @@ system:
   edition: solo
   live: true
   name: 'Benjamin''s Blog'
-  schemaVersion: 3.1.23
+  schemaVersion: 3.1.25
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
