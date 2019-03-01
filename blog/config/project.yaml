@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1550970084
+dateModified: 1551398972
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -799,9 +799,9 @@ sites:
     hasUrls: true
     language: en-US
     name: 'Benjamin''s Blog'
-    primary: '1'
+    primary: true
     siteGroup: f95fca09-889c-467f-9465-fdac4702e920
-    sortOrder: '1'
+    sortOrder: 1
 superTableBlockTypes:
   2d9e6361-35e9-42cf-a047-3bafee484c14:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
