@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "3.1.15",
+    "craftcms/cms": "3.1.20.1",
     "craftcms/redactor": "2.3.2",
     "luwes/craft3-codemirror": "1.0.1",
     "raeder/craft-http2-server-push-twig": "^1.0",
