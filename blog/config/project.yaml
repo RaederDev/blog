@@ -31,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: '1'
       uid: 1b7cd387-6a9b-4763-87c4-2d5d6ef5791a
-dateModified: 1551398972
+dateModified: 1562097340
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -794,14 +794,14 @@ siteGroups:
     name: 'Benjamin''s Blog'
 sites:
   e9196875-0f12-4280-a9ae-45d6b270450a:
-    baseUrl: $DEFAULT_SITE_URL
-    handle: default
-    hasUrls: true
-    language: en-US
-    name: 'Benjamin''s Blog'
-    primary: true
     siteGroup: f95fca09-889c-467f-9465-fdac4702e920
-    sortOrder: 1
+    name: 'Benjamin''s Blog'
+    handle: default
+    language: en-US
+    hasUrls: true
+    baseUrl: $DEFAULT_SITE_URL
+    sortOrder: '1'
+    primary: '1'
 superTableBlockTypes:
   2d9e6361-35e9-42cf-a047-3bafee484c14:
     field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
@@ -868,7 +868,7 @@ system:
   edition: solo
   live: true
   name: 'Benjamin''s Blog'
-  schemaVersion: 3.1.25
+  schemaVersion: 3.1.28
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
