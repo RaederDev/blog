@@ -13,6 +13,7 @@
             {% set posts = craft
                 .entries()
                 .section('blog')
+                .draft(0)
                 .all() %}
             {% for entry in posts %}
                 <item>
@@ -22,7 +23,7 @@
                     <author>{{ entry.author.firstName }} {{ entry.author.lastName }}</author>
                     <guid>{{ entry.url }}</guid>
                     <description><![CDATA[
-                        {% include 'post/_template.html' with {post: entry} %}
+                        {% include 'post/_template.html' with {post: entry, preview: false} %}
                     ]]></description>
                 </item>
             {% endfor %}
