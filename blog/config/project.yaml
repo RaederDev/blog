@@ -31,7 +31,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1573936030
+dateModified: 1573937311
 email:
   fromEmail: raederbenjamin1000@gmail.com
   fromName: 'Benjamin''s Blog'
@@ -808,75 +808,11 @@ sites:
     sortOrder: 1
     primary: true
     siteGroup: f95fca09-889c-467f-9465-fdac4702e920
-superTableBlockTypes:
-  2d9e6361-35e9-42cf-a047-3bafee484c14:
-    field: 4fde7648-12d7-49ae-ab25-87badd9e9d66
-    fieldLayouts:
-      a26cc2f0-35fb-46fd-9e6b-e4a1f3ba179f:
-        tabs:
-          -
-            fields:
-              7cf9716a-ea49-4320-9a80-033e1af7e1f7:
-                required: false
-                sortOrder: 1
-              ebbe9d22-c6c3-4726-a19a-11c06b046f89:
-                required: false
-                sortOrder: 2
-            name: Content
-            sortOrder: 1
-    fields:
-      7cf9716a-ea49-4320-9a80-033e1af7e1f7:
-        contentColumnType: text
-        fieldGroup: null
-        handle: textBlock
-        instructions: ''
-        name: 'Text Block'
-        searchable: true
-        settings:
-          availableTransforms: '*'
-          availableVolumes: '*'
-          columnType: text
-          purifierConfig: ''
-          purifyHtml: '1'
-          redactorConfig: Standard.json
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
-        translationKeyFormat: null
-        translationMethod: none
-        type: craft\redactor\Field
-      ebbe9d22-c6c3-4726-a19a-11c06b046f89:
-        contentColumnType: string
-        fieldGroup: null
-        handle: imageBlock
-        instructions: ''
-        name: 'Image Block'
-        searchable: true
-        settings:
-          allowedKinds:
-            - image
-          defaultUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
-          defaultUploadLocationSubpath: '{slug}'
-          limit: '1'
-          localizeRelations: false
-          restrictFiles: '1'
-          selectionLabel: 'Add image'
-          singleUploadLocationSource: 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources:
-            - 'volume:431e4963-6c02-4fe1-a90e-5888b696fa16'
-          targetSiteId: null
-          useSingleFolder: ''
-          viewMode: large
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Assets
 system:
   edition: solo
   live: true
   name: 'Benjamin''s Blog'
-  schemaVersion: 3.1.28
+  schemaVersion: 3.3.3
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
