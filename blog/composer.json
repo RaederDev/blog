@@ -1,8 +1,8 @@
 {
   "require": {
-    "craftcms/cms": "3.3.15",
-    "craftcms/redactor": "2.4.0",
-    "luwes/craft3-codemirror": "1.0.1",
+    "craftcms/cms": "3.4.30",
+    "craftcms/redactor": "2.6.1",
+    "luwes/craft3-codemirror": "1.0.2",
     "raeder/craft-http2-server-push-twig": "^1.0",
     "supercool/tablemaker": "2.0.1",
     "vlucas/phpdotenv": "^2.4.0"
